@@ -234,5 +234,3 @@ _Pvt_Extensions
 .fake/
 
 aprintist.db
-obj/aprintist.csproj.nuget.cache
-obj/**

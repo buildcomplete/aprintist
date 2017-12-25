@@ -1,0 +1,49 @@
+@model aprintist.Models.Observation
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Observation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Slicer" class="control-label"></label>
+                <input asp-for="Slicer" class="form-control" />
+                <span asp-validation-for="Slicer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Printer" class="control-label"></label>
+                <input asp-for="Printer" class="form-control" />
+                <span asp-validation-for="Printer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estimate" class="control-label"></label>
+                <input asp-for="Estimate" class="form-control" />
+                <span asp-validation-for="Estimate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actual" class="control-label"></label>
+                <input asp-for="Actual" class="form-control" />
+                <span asp-validation-for="Actual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
